@@ -1,0 +1,461 @@
+<!-- This is an online shopping page which will have 10 items for sale.
+     It will use the grid system of Bootstrap.
+     It will have responsive images and display a price, name and 'buy' button for each product.
+     It will also have a form for customers to fill in should they want to get in touch.
+     And a displayed logo next to the customer form.
+     -->
+
+    <!DOCTYPE html>
+    <!-- Specifying the language -->
+    <html lang="en">
+    <!-- Beginning of the head -->
+        <head>
+            <!-- Specifying the character encoding.
+                (Found on stackoverflow whilst looking for something else)-->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Downloading Bootstrap -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <!-- Linking to css -->
+            <link rel="stylesheet" type="text/css" href="shopping_page.css">
+            
+            <!-- Naming the tab-->
+            <title>YOLO</title>
+            <!-- Found on w3schools.com for the fade overlay -->
+            <!-- This ensures that all stylings remain the same for each class -->
+            <style>
+                .container {
+                position: relative;
+                width: 50%;
+                }
+                
+                .image {
+                display: block;
+                width: 100%;
+                height: auto;
+                }
+                
+                .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #008CBA;
+                }
+                
+                .container:hover .overlay {
+                opacity: 1;
+                }
+                
+                .text {
+                color: white;
+                font-size: 10px;
+                font-style: italic;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+                
+                }
+
+                .form-group {
+                text-align: left;
+                
+                }
+            </style>
+        <!-- End of the head -->
+        </head>
+    
+        <!-- Beginning of the body -->
+        <body>
+            <!-- These are breaks.  They create a new line -->
+            <br>
+            <br>
+            <!-- The first heading. The text will be centered. -->
+            <h1 class="text-center">YOLO</h1>
+            <br>
+            <!-- A paragraph. Or some text -->
+            <p>brought to you by</p><p class="font-weight-bold">Notes from Underground</p>
+            <br>
+            <!-- An image, centered, with slightly rounded edges and an alt message to display
+            in situations where the image cannot be displayed -->
+            <img src="T42 Bootstrap photos/church live art.jpg" alt="join us"
+            class="rounded mx-auto d-block" class="text-center" style="width:200px;height:200px;">
+            <br>
+            <h3 class="text-center">You Only Live Once!</h3>
+            <br>
+            <br>
+            <!-- A Welcome message -->
+            <p>Hey there and welcome to our site!</p>
+            <p>Don't worry, we're not suggesting that if you're not staring death in the face that you're not
+            'living'!</p>
+            <p>Rather that life is short and if there are things you've always wanted to do, we're here to help
+            make that happen.</p>
+            <p>So, go ahead, browse our options
+            and live life experiencing all the things you've always wanted to, without expectations or pressure...
+            </p>
+            <br>
+            <br>
+    
+            <!-- Creating grids -->
+            <div class="container">
+                <!-- First row -->
+                <div class="row">
+                    <!-- First column of the first row -->
+                    <div class="col-md">
+                    <!-- Adding an image-->
+                    <img src="T42 Bootstrap photos/bright_sun_clear_sea_dark.jpg" alt="beach sunrise"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <!-- This is the text that will be displayed if the mouse hovers over the image -->
+                        <div class="text">The water might be cold at dawn, but who can resist that setting! And don't worry, the sauna is baking hot! You might need another dip afterwards to cool down...</div>
+                    </div>
+                    </div>
+                    
+                    <!-- Second column of the first row -->
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/potted plants.jpg" alt="potted plants"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">A minature gardening adventure followed by some world class pickle making? Yes, please!</div>
+                    </div>
+                    </div>
+
+                    <!-- Third column of the first row -->
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/full_moon_fire.jpg" alt="full moon fire"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Hocus pocus... let go of all the bad energy, make space for good things to come...</div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="container">
+                <!-- Creating the second row -->
+                <div class="row">
+                    <!-- This is the text that will be displayed under the image 
+                         from the first column of the first row -->
+                    <div class="col-md">
+                        Sea Swimming and<br>Outdoor Sauna<br>£45
+                    </div>
+
+                    <!-- This is the text that will be displayed under the image 
+                         from the second column of the first row -->
+                    <div class="col-md">
+                        Gardening and<br>Pickle Making<br>£50
+                    </div>
+
+                    <!-- This is the text that will be displayed under the image
+                         from the third column of the first row -->
+                    <div class="col-md">
+                        Beach Fire with<br>Full Moon Ceremony<br>£250
+                    </div>
+
+                </div>
+            </div>
+    
+            <div class="container">
+                <!-- Creating the third row -->
+                <div class="row">
+                    <div class="col-md">
+                        <!-- Creating 'Buy Now' buttons which will be displayed under the respective columns
+                             of the second row. This is the first column -->
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <!-- This is the second column -->
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <!-- This is the third column -->
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+    
+            <!-- This begins the second row of images -->
+            <div class="container">
+                <div class="row">
+                    <!-- The first column -->
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/hills_sea_sunset_moon.jpg" alt="hill sunset"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Craving some time away from the hustle and bustle of life? Look no further...</div>
+                    </div>
+                    </div>
+                    
+                    <!-- The second column -->
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/malta_historic_building.jpg" alt="history walk"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Some old school charm</div>
+                    </div>
+                    </div>
+    
+                    <!-- The third column -->
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/bridge archway.jpg" alt="archway"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Learn the rules then put them into practice</div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        
+            <!-- This is the second row of text displays which fit under the images from the row above -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        Hill Hike plus<br>Bird Watching<br>£75
+                    </div>
+    
+                    <div class="col-md">
+                        History Walk and<br>Candlelit Concert<br>£80
+                    </div>
+                    
+                    <div class="col-md">
+                        Board Games then<br>Immersive Escape Adventure<br>£350
+                    </div>
+
+                </div>
+            </div>
+    
+            <!-- These are the 'Buy Now' buttons which sit under the text displays from the row above -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+    
+            <!-- The third row of images -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/bristol_street_art.jpg" alt="street art"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">What's that you say? Art on the streets? Come find out what it's all about</div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/notebook.jpg" alt="notes"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Ever wanted to be on stage, but never given the chance? Here you go...</div>
+                    </div>
+                    </div>
+    
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/Becca karaoke.jpg" alt="karaoke"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Take a lesson then show off your new skills!</div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+    
+            <!-- The third row of text displays -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        Street Art Tour plus<br>Live Art Exhibition<br>£100
+                    </div>
+    
+                    <div class="col-md">
+                        Writing Workshop then<br>Open Mic<br>£110
+                    </div>
+                    
+                    <div class="col-md">
+                        Singing Lesson before<br>Karaoke Night<br>£120
+                    </div>
+
+                </div>
+            </div>
+    
+            <!-- The third row of 'Buy Now' buttons -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+    
+            <!-- The fourth row of images -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/rail_arches.jpg" alt="rail arches"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">What's real and what's play?</div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/notes_gig_poster.jpg" alt="poster"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">Who's that, playing where? Find out about the hottest new talent, and the coolest underground venues</div>
+                    </div>
+                    </div>
+    
+                    <div class="col-md">
+                    <img src="T42 Bootstrap photos/woodland_camping.jpg" alt="woodland"
+                    style="width:200px;height:200px;">
+                    <div class="overlay">
+                        <div class="text">It's all very friendly during the day...</div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+    
+            <!-- The fourth row of text displays -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        Interactive Theatre plus<br>Four Course Meal<br>£145
+                    </div>
+
+                    <div class="col-md">
+                        Underground Gig Venues Tour<br>plus One Off Gig<br>£130
+                    </div>
+
+                    <div class="col-md">
+                        Outdoor Madness with<br>Ghost Stories<br>£250
+                    </div>
+
+                </div>
+            </div>
+    
+            <!-- The fourth row of 'Buy Now' buttons -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                    <div class="col-md">
+                        <a class="btn btn-primary" href="#" role="button">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+    
+            <!-- This is the contact form section -->
+            <div class="container">
+                <h2>Contact Us</h2>
+                <br>
+
+                <!-- Displaying a logo -->
+                <img src="T42 Bootstrap photos/noteslogo.jpg" alt="notes logo"
+                style="width:100px;height:100px;">
+                <br>
+                <br>
+
+                <!-- A message to the user -->
+                <p>We'd love to hear from you! Whether you have an idea that you'd like to bring to reality...</p>
+                <p>Or you have some feedback you'd like to share...</p>
+                <p>Even if you just wanna say 'hey!' &#128513;</p>
+                
+                <form class="form-horizontal" action="/action_page.php">
+
+                    <!-- Due to creating a section at the beginning of the program for the class of 'form-group'
+                         under 'style', the text for this section will be left-aligned rather than center,
+                         which it is for the rest of the program -->
+                    <!-- Creating the 'Enter Name' section -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" text-align="left" for="name">Name:</label>
+                        <div class="col-sm-10">
+                            <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
+                        </div>
+                    </div>
+
+                    <!-- Creating the 'Enter Email' section -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                        </div>
+                    </div>
+
+                    <!-- Creating the 'Enter Message' section -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="message">Message:</label>
+                        <div class="col-sm-10">          
+                            <input type="message" class="form-control" id="message" placeholder="Enter Message" name="message">
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Creating the 'submit' button -->
+                    <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                    </div>
+                <!-- End of the form -->
+                </form>
+            </div>
+            <br>
+            <br>
+        <!-- End of the body -->
+        </body>
+    <!-- End of the file -->
+    </html>

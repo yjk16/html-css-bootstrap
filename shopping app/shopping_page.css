@@ -1,0 +1,13 @@
+/* This is the css section which is linked to shopping_page.html */
+
+/* This will make sure the background is midnight blue in colour.
+   All text will be the colour of aliceblue and aligned to the center */
+
+body {
+    background-color: midnightblue;
+
+    text-align: center;
+
+    color: aliceblue;
+    
+}
